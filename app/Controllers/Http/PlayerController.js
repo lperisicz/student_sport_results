@@ -45,7 +45,7 @@ class PlayerController {
       "<html>\n" +
       "<body>\n" +
       "\n" +
-      "<h1>A vi Anni kakote?</h1>\n" +
+      "<h1>Borna ima malog pišu!!!</h1>\n" +
       "\n" +
       "</body>\n" +
       "</html>")
