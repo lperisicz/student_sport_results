@@ -90,3 +90,11 @@ p {
     transform: none;
   }
 }
+
+p.ex2 {
+  font-size: 70px;
+  color: #BDB3CB;
+  background-size: 100%;
+  animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 1.3s forwards;
+  text-align: center;
+}
