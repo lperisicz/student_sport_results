@@ -7,4 +7,6 @@ module.exports = Route.group(() => {
 
   Route.get('/all', 'UserController.all')
 
+  Route.post('/login', 'UserController.login')
+
 })
