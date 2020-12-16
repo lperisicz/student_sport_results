@@ -40,6 +40,17 @@ class PlayerController {
     response.send(responseDummyData)
   }
 
+  async test({response}) {
+    response.send("<!DOCTYPE html>\n" +
+      "<html>\n" +
+      "<body>\n" +
+      "\n" +
+      "<h1>A vi Anni kakote?</h1>\n" +
+      "\n" +
+      "</body>\n" +
+      "</html>")
+  }
+
 }
 
 module.exports = PlayerController

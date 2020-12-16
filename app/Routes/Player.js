@@ -7,4 +7,6 @@ module.exports = Route.group(() => {
 
   Route.get('/filter', 'PlayerController.filter')
 
+  Route.get('/test', 'PlayerController.test')
+
 })
