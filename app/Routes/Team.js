@@ -19,7 +19,7 @@ module.exports = Route.group(() => {
   Route.post('/create', 'TeamController.create')
 
   /**
-   * @api {post} /api/teams/filter filter
+   * @api {get} /api/teams/filter filter
    * @apiGroup Team
    *
    * @apiDescription Public route for getting all teams
