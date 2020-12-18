@@ -46,6 +46,49 @@ define({ "api": [
   },
   {
     "type": "post",
+    "url": "/api/teams/create",
+    "title": "create",
+    "group": "Team",
+    "description": "<p>Public route create a team</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Team name</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "faculty",
+            "description": "<p>Faculty full name</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int[]",
+            "optional": false,
+            "field": "players",
+            "description": "<p>Ids of players to assign in team</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "app/Routes/Team.js",
+    "groupTitle": "Team",
+    "name": "PostApiTeamsCreate",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/teams/create"
+      }
+    ]
+  },
+  {
+    "type": "post",
     "url": "/api/users/login",
     "title": "login",
     "group": "User",
