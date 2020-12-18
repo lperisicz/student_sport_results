@@ -5,14 +5,14 @@ const Schema = use('Schema')
 
 class PlayersAlterSchema extends Schema {
   up () {
-    this.table('players_alters', (table) => {
+    this.table('players', (table) => {
       // alter table
       table.integer('team_id')
     })
   }
 
   down () {
-    this.table('players_alters', (table) => {
+    this.table('players', (table) => {
       // reverse alternations
       table.dropColumn('team_id')
     })
