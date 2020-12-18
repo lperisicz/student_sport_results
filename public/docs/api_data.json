@@ -45,18 +45,38 @@
     ]
   },
   {
-    "type": "get",
-    "url": "/api/users/all",
-    "title": "Index",
+    "type": "post",
+    "url": "/api/users/login",
+    "title": "login",
     "group": "User",
-    "description": "<p>Public route to list all users</p>",
+    "description": "<p>Public route to login user</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Users email</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "password",
+            "description": "<p>Users password</p>"
+          }
+        ]
+      }
+    },
     "version": "0.0.0",
     "filename": "app/Routes/User.js",
     "groupTitle": "User",
-    "name": "GetApiUsersAll",
+    "name": "PostApiUsersLogin",
     "sampleRequest": [
       {
-        "url": "https://student-sport-results.herokuapp.com/api/users/all"
+        "url": "https://student-sport-results.herokuapp.com/api/users/login"
       }
     ]
   }

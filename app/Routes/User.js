@@ -5,15 +5,18 @@ const Route = use('Route')
 
 module.exports = Route.group(() => {
 
-  /**
-   * @api {get} /api/users/all Index
-   * @apiGroup User
-   *
-   * @apiDescription Public route to list all users
-   *
-   */
   Route.get('/all', 'UserController.all')
 
+  /**
+   * @api {post} /api/users/login login
+   * @apiGroup User
+   *
+   * @apiDescription Public route to login user
+   *
+   * @apiParam {string} email Users email
+   * @apiParam {string} password Users password
+   *
+   */
   Route.post('/login', 'UserController.login')
 
 })

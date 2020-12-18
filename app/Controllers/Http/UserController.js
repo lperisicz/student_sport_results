@@ -10,17 +10,14 @@ class UserController {
     response.send(users)
   }
 
-  async login({response}) {
-    let responseDummyData = {
+  async login({request, response}) {
+    response.send({
       data: {
-        user: {
-          username: 'baja1234',
-          email: 'smallpipi@gmail.com',
-          role: 'admin'
-        }
+        user: `${request.post().email.split("@")[0]}123`,
+        email: request.post().email,
+        role: 'admin'
       }
-    }
-    response.send(responseDummyData)
+    })
   }
 
 }
