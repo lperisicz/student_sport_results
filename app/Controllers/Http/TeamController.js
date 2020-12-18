@@ -25,6 +25,12 @@ class TeamController {
     })
   }
 
+  async filter({response}) {
+    response.send({
+      data: await Team.all()
+    })
+  }
+
 }
 
 module.exports = TeamController

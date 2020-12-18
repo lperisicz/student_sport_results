@@ -89,6 +89,22 @@
   },
   {
     "type": "post",
+    "url": "/api/teams/filter",
+    "title": "filter",
+    "group": "Team",
+    "description": "<p>Public route for getting all teams</p>",
+    "version": "0.0.0",
+    "filename": "app/Routes/Team.js",
+    "groupTitle": "Team",
+    "name": "PostApiTeamsFilter",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/teams/filter"
+      }
+    ]
+  },
+  {
+    "type": "post",
     "url": "/api/users/login",
     "title": "login",
     "group": "User",
