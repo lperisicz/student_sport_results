@@ -1,0 +1,17 @@
+{
+  "name": "Student sport results",
+  "version": "0.0.1",
+  "description": "Documentation for the REST api",
+  "title": "Student sport results",
+  "url" : "https://student-sport-results.herokuapp.com/docs",
+  "sampleUrl": "https://student-sport-results.herokuapp.com",
+  "header": {
+    "title": "Introduction",
+    "filename": "header.md"
+  },
+  "template": {
+    "withCompare": true,
+    "withGenerator": true,
+    "aloneDisplay": false
+  }
+}
