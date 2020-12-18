@@ -28,4 +28,13 @@ module.exports = Route.group(() => {
    */
   Route.get('/filter', 'TeamController.filter')
 
+  /**
+   * @api {delete} /api/teams/delete/:id delete
+   * @apiGroup Team
+   *
+   * @apiDescription Public route for deleting team
+   *
+   */
+  Route.delete('/delete/:id', 'TeamController.delete')
+
 })

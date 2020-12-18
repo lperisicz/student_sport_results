@@ -45,6 +45,38 @@ define({ "api": [
     ]
   },
   {
+    "type": "delete",
+    "url": "/api/teams/delete/:id",
+    "title": "delete",
+    "group": "Team",
+    "description": "<p>Public route for deleting team</p>",
+    "version": "0.0.0",
+    "filename": "app/Routes/Team.js",
+    "groupTitle": "Team",
+    "name": "DeleteApiTeamsDeleteId",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/teams/delete/:id"
+      }
+    ]
+  },
+  {
+    "type": "get",
+    "url": "/api/teams/filter",
+    "title": "filter",
+    "group": "Team",
+    "description": "<p>Public route for getting all teams</p>",
+    "version": "0.0.0",
+    "filename": "app/Routes/Team.js",
+    "groupTitle": "Team",
+    "name": "GetApiTeamsFilter",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/teams/filter"
+      }
+    ]
+  },
+  {
     "type": "post",
     "url": "/api/teams/create",
     "title": "create",
@@ -84,22 +116,6 @@ define({ "api": [
     "sampleRequest": [
       {
         "url": "https://student-sport-results.herokuapp.com/api/teams/create"
-      }
-    ]
-  },
-  {
-    "type": "post",
-    "url": "/api/teams/filter",
-    "title": "filter",
-    "group": "Team",
-    "description": "<p>Public route for getting all teams</p>",
-    "version": "0.0.0",
-    "filename": "app/Routes/Team.js",
-    "groupTitle": "Team",
-    "name": "PostApiTeamsFilter",
-    "sampleRequest": [
-      {
-        "url": "https://student-sport-results.herokuapp.com/api/teams/filter"
       }
     ]
   },

@@ -31,6 +31,17 @@ class TeamController {
     })
   }
 
+  async delete({params, response}) {
+    console.log("id. ", params.id)
+    await Team
+      .query()
+      .where('id', '=', params.id)
+      .delete()
+    response.send({
+      data: {}
+    })
+  }
+
 }
 
 module.exports = TeamController
