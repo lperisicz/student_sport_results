@@ -1,5 +1,41 @@
 define({ "api": [
   {
+    "type": "post",
+    "url": "/api/faculties/create",
+    "title": "create",
+    "group": "Faculty",
+    "description": "<p>Public route create a single faculty</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Faculty full name</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "city",
+            "description": "<p>City name</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "app/Routes/Faculty.js",
+    "groupTitle": "Faculty",
+    "name": "PostApiFacultiesCreate",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/faculties/create"
+      }
+    ]
+  },
+  {
     "type": "get",
     "url": "/api/players/filter",
     "title": "filter",
@@ -41,6 +77,42 @@ define({ "api": [
     "sampleRequest": [
       {
         "url": "https://student-sport-results.herokuapp.com/api/players/create"
+      }
+    ]
+  },
+  {
+    "type": "post",
+    "url": "/api/sports/create",
+    "title": "create",
+    "group": "Sport",
+    "description": "<p>Public route create a single sport</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Unique sport name</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "integer",
+            "optional": false,
+            "field": "minPlayers",
+            "description": "<p>Min number of players for sport</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "app/Routes/Sport.js",
+    "groupTitle": "Sport",
+    "name": "PostApiSportsCreate",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/sports/create"
       }
     ]
   },
@@ -94,10 +166,17 @@ define({ "api": [
           },
           {
             "group": "Parameter",
-            "type": "string",
+            "type": "int",
             "optional": false,
-            "field": "faculty",
-            "description": "<p>Faculty full name</p>"
+            "field": "faculty_id",
+            "description": "<p>Faculty id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "sport_id",
+            "description": "<p>Sport id</p>"
           },
           {
             "group": "Parameter",

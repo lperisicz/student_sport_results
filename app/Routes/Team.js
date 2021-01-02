@@ -13,6 +13,7 @@ module.exports = Route.group(() => {
    *
    * @apiParam {string} name Team name
    * @apiParam {int} faculty_id Faculty id
+   * @apiParam {int} sport_id Sport id
    * @apiParam {int[]} players Ids of players to assign in team
    *
    */

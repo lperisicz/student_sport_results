@@ -4,6 +4,11 @@
 const Model = use('Model')
 
 class Sport extends Model {
+
+  teams() {
+    return this.hasMany('App/Model/Team', 'id', 'sport_id')
+  }
+
 }
 
 module.exports = Sport
