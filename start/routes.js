@@ -8,6 +8,7 @@ _requireRoutes('User').prefix('api/users')
 _requireRoutes('Player').prefix('api/players')
 _requireRoutes('Team').prefix('api/teams')
 _requireRoutes('Faculty').prefix('api/faculties')
+_requireRoutes('Sport').prefix('api/sports')
 
 function _requireRoutes(group) {
   return require(`../app/Routes/${group}`)
