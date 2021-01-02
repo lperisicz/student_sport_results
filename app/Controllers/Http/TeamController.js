@@ -8,7 +8,7 @@ class TeamController {
 
     let payload = request.post()
 
-    let team = await Team.create(request.only(['name', 'faculty']))
+    let team = await Team.create(request.only(['name', 'faculty_id']))
 
     await Player
       .query()

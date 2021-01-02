@@ -12,7 +12,7 @@ module.exports = Route.group(() => {
    * @apiDescription Public route create a team
    *
    * @apiParam {string} name Team name
-   * @apiParam {string} faculty Faculty full name
+   * @apiParam {int} faculty_id Faculty id
    * @apiParam {int[]} players Ids of players to assign in team
    *
    */
