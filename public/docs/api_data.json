@@ -205,6 +205,22 @@
     ]
   },
   {
+    "type": "get",
+    "url": "/api/sports/filter",
+    "title": "filter",
+    "group": "Sport",
+    "description": "<p>Public route lists all sports</p>",
+    "version": "0.0.0",
+    "filename": "app/Routes/Sport.js",
+    "groupTitle": "Sport",
+    "name": "GetApiSportsFilter",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/sports/filter"
+      }
+    ]
+  },
+  {
     "type": "post",
     "url": "/api/sports/create",
     "title": "create",

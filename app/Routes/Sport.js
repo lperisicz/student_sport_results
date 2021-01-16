@@ -17,4 +17,14 @@ module.exports = Route.group(() => {
    */
   Route.post('/create', 'SportController.create')
 
+  /**
+   * @api {get} /api/sports/filter filter
+   * @apiGroup Sport
+   *
+   * @apiDescription Public route lists all sports
+   *
+   *
+   */
+  Route.get('/filter', 'SportController.filter')
+
 })
