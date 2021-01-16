@@ -11,6 +11,12 @@ class FacultyController {
     })
   }
 
+  async filter({response}) {
+    response.send({
+      data: await Faculty.all()
+    })
+  }
+
 }
 
 module.exports = FacultyController

@@ -1,5 +1,21 @@
 [
   {
+    "type": "get",
+    "url": "/api/faculties/filter",
+    "title": "filter",
+    "group": "Faculty",
+    "description": "<p>Public route lists all faculties</p>",
+    "version": "0.0.0",
+    "filename": "app/Routes/Faculty.js",
+    "groupTitle": "Faculty",
+    "name": "GetApiFacultiesFilter",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/faculties/filter"
+      }
+    ]
+  },
+  {
     "type": "post",
     "url": "/api/faculties/create",
     "title": "create",

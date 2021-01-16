@@ -17,4 +17,13 @@ module.exports = Route.group(() => {
    */
   Route.post('/create', 'FacultyController.create')
 
+  /**
+   * @api {get} /api/faculties/filter filter
+   * @apiGroup Faculty
+   *
+   * @apiDescription Public route lists all faculties
+   *
+   */
+  Route.get('/filter', 'FacultyController.filter')
+
 })
