@@ -41,6 +41,19 @@
     "title": "filter",
     "group": "Match",
     "description": "<p>Public route lists all matches for sport</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "integer",
+            "optional": false,
+            "field": "sportId",
+            "description": "<p>Sport id</p>"
+          }
+        ]
+      }
+    },
     "version": "0.0.0",
     "filename": "app/Routes/Match.js",
     "groupTitle": "Match",

@@ -36,6 +36,8 @@ module.exports = Route.group(() => {
    *
    * @apiDescription Public route lists all matches for sport
    *
+   * @apiParam {integer} sportId Sport id
+   *
    */
   Route.get('/filter/:sportId', 'MatchController.filter')
 
