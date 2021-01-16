@@ -26,6 +26,20 @@ class MatchController {
     })
   }
 
+  async filter({params, response}) {
+    const sportId = params.sportId;
+
+    response.send({
+      data: await Match
+        .query()
+        .where('sport_id', sportId)
+        .with('sport')
+        .with('teamOne')
+        .with('teamTwo')
+        .fetch()
+    })
+  }
+
 }
 
 module.exports = MatchController

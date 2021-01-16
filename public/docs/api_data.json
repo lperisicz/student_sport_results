@@ -37,6 +37,22 @@
   },
   {
     "type": "get",
+    "url": "/api/matches/filter/:sportId",
+    "title": "filter",
+    "group": "Match",
+    "description": "<p>Public route lists all matches for sport</p>",
+    "version": "0.0.0",
+    "filename": "app/Routes/Match.js",
+    "groupTitle": "Match",
+    "name": "GetApiMatchesFilterSportid",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/matches/filter/:sportId"
+      }
+    ]
+  },
+  {
+    "type": "get",
     "url": "/api/matches/get/:matchId",
     "title": "get",
     "group": "Match",
