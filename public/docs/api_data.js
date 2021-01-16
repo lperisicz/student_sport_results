@@ -37,6 +37,85 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/api/matches/get/:matchId",
+    "title": "get",
+    "group": "Match",
+    "description": "<p>Public route get single match</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "integer",
+            "optional": false,
+            "field": "matchId",
+            "description": "<p>Match id</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "app/Routes/Match.js",
+    "groupTitle": "Match",
+    "name": "GetApiMatchesGetMatchid",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/matches/get/:matchId"
+      }
+    ]
+  },
+  {
+    "type": "post",
+    "url": "/api/matches/create",
+    "title": "create",
+    "group": "Match",
+    "description": "<p>Public route create a single match</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "integer",
+            "optional": false,
+            "field": "sport_id",
+            "description": "<p>Sport id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "integer",
+            "optional": false,
+            "field": "team_one",
+            "description": "<p>Team one id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "integer",
+            "optional": false,
+            "field": "team_two",
+            "description": "<p>Team two id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "date",
+            "description": "<p>Time of match, format: &quot;2020-12-18 17:04:46&quot;</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "app/Routes/Match.js",
+    "groupTitle": "Match",
+    "name": "PostApiMatchesCreate",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/matches/create"
+      }
+    ]
+  },
+  {
+    "type": "get",
     "url": "/api/players/filter",
     "title": "filter",
     "group": "Player",
