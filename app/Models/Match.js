@@ -17,6 +17,10 @@ class Match extends Model {
     return this.hasOne('App/Models/Team', 'team_two', 'id')
   }
 
+  events() {
+    return this.hasMany('App/Models/Event', 'id', 'match_id')
+  }
+
 }
 
 module.exports = Match

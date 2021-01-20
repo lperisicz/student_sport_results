@@ -1,5 +1,75 @@
 [
   {
+    "type": "post",
+    "url": "/api/events/create",
+    "title": "create",
+    "group": "Event",
+    "description": "<p>Public route create a single event</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "integer",
+            "optional": false,
+            "field": "match_id",
+            "description": "<p>Id of match for new event</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "integer",
+            "optional": false,
+            "field": "team_id",
+            "description": "<p>Id of team for new event</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "integer",
+            "optional": false,
+            "field": "player_id",
+            "description": "<p>Id of player for new event</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "allowedValues": [
+              "\"goal\"",
+              "\"yellow_card\"",
+              "\"red_card\"",
+              "\"penalty_kick\""
+            ],
+            "optional": false,
+            "field": "type",
+            "description": "<p>Type of event</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "integer",
+            "optional": false,
+            "field": "time",
+            "description": "<p>Time of event in milliseconds</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "integer",
+            "optional": false,
+            "field": "interval",
+            "description": "<p>Interval of event eg. 1 -&gt; First half</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "app/Routes/Event.js",
+    "groupTitle": "Event",
+    "name": "PostApiEventsCreate",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/events/create"
+      }
+    ]
+  },
+  {
     "type": "get",
     "url": "/api/faculties/filter",
     "title": "filter",

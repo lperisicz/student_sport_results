@@ -6,7 +6,7 @@ const Model = use('Model')
 class Sport extends Model {
 
   teams() {
-    return this.hasMany('App/Model/Team', 'id', 'sport_id')
+    return this.hasMany('App/Models/Team', 'id', 'sport_id')
   }
 
 }
