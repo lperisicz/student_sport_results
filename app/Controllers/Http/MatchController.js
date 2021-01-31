@@ -69,19 +69,49 @@ class MatchController {
       let match = matchesJSON[i]
       let scoreOne = await Event
         .query()
+        .where('match_id', match.id)
         .where('team_id', match.team_one)
+        .where('type', 'goal')
         .count('* as scoreOne')
 
-      scoreOne = scoreOne[0].scoreOne
+      let scoreOneDoubles = await Event
+        .query()
+        .where('match_id', match.id)
+        .where('team_id', match.team_one)
+        .where('type', 'field_goal')
+        .count('* as scoreOneDoubles')
+
+      let scoreOneTriples = await Event
+        .query()
+        .where('match_id', match.id)
+        .where('team_id', match.team_one)
+        .where('type', 'three_point_field_goal')
+        .count('* as scoreOneTriples')
+
+      scoreOne = parseInt(scoreOne[0].scoreOne) + (2 * parseInt(scoreOneDoubles[0].scoreOneDoubles)) + (3 * parseInt(scoreOneTriples[0].scoreOneTriples))
 
       let scoreTwo = await Event
         .query()
+        .where('match_id', match.id)
         .where('team_id', match.team_two)
+        .where('type', 'goal')
         .count('* as scoreTwo')
 
+      let scoreTwoDoubles = await Event
+        .query()
+        .where('match_id', match.id)
+        .where('team_id', match.team_two)
+        .where('type', 'field_goal')
+        .count('* as scoreTwoDoubles')
 
+      let scoreTwoTriples = await Event
+        .query()
+        .where('match_id', match.id)
+        .where('team_id', match.team_two)
+        .where('type', 'three_point_field_goal')
+        .count('* as scoreTwoTriples')
 
-      scoreTwo = scoreTwo[0].scoreTwo
+      scoreTwo = parseInt(scoreTwo[0].scoreTwo) + (2 * parseInt(scoreTwoDoubles[0].scoreTwoDoubles)) + (3 * parseInt(scoreTwoTriples[0].scoreTwoTriples))
 
       let gameFinishedEvent = await Event.query()
         .where('type', 'game_end')

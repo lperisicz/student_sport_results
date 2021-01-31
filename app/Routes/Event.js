@@ -14,7 +14,7 @@ module.exports = Route.group(() => {
    * @apiParam {integer} match_id Id of match for new event
    * @apiParam {integer} team_id Id of team for new event
    * @apiParam {integer} player_id Id of player for new event
-   * @apiParam {string = "goal", "yellow_card", "red_card", "penalty_kick", "game_end"} type Type of event
+   * @apiParam {string = "goal", "field_goal", "three_point_field_goal", "yellow_card", "red_card", "penalty_kick", "game_end"} type Type of event
    * @apiParam {integer} time Time of event in milliseconds
    * @apiParam {integer} interval Interval of event eg. 1 -> First half
    *

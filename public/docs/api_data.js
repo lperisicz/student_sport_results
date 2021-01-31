@@ -50,6 +50,8 @@ define({ "api": [
             "type": "string",
             "allowedValues": [
               "\"goal\"",
+              "\"field_goal\"",
+              "\"three_point_field_goal\"",
               "\"yellow_card\"",
               "\"red_card\"",
               "\"penalty_kick\"",
