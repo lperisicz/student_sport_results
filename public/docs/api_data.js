@@ -139,6 +139,22 @@ define({ "api": [
     ]
   },
   {
+    "type": "delete",
+    "url": "/api/matches/delete/:id",
+    "title": "delete",
+    "group": "Match",
+    "description": "<p>Public route for deleting match</p>",
+    "version": "0.0.0",
+    "filename": "app/Routes/Match.js",
+    "groupTitle": "Match",
+    "name": "DeleteApiMatchesDeleteId",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/matches/delete/:id"
+      }
+    ]
+  },
+  {
     "type": "get",
     "url": "/api/matches/filter/:sportId",
     "title": "filter",

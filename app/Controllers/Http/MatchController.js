@@ -89,6 +89,16 @@ class MatchController {
     })
   }
 
+  async delete({params, response}) {
+    await Match
+      .query()
+      .where('id', '=', params.id)
+      .delete()
+    response.send({
+      data: {}
+    })
+  }
+
 }
 
 module.exports = MatchController

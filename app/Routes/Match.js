@@ -41,4 +41,13 @@ module.exports = Route.group(() => {
    */
   Route.get('/filter/:sportId', 'MatchController.filter')
 
+  /**
+   * @api {delete} /api/matches/delete/:id delete
+   * @apiGroup Match
+   *
+   * @apiDescription Public route for deleting match
+   *
+   */
+  Route.delete('/delete/:id', 'MatchController.delete')
+
 })
