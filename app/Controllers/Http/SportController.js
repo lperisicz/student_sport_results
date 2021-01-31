@@ -17,6 +17,16 @@ class FacultyController {
     })
   }
 
+  async delete({params, response}) {
+    await Sport
+      .query()
+      .where('id', '=', params.id)
+      .delete()
+    response.send({
+      data: {}
+    })
+  }
+
 }
 
 module.exports = FacultyController
