@@ -27,4 +27,13 @@ module.exports = Route.group(() => {
    */
   Route.post('/create', 'PlayerController.create')
 
+  /**
+   * @api {delete} /api/players/delete/:id delete
+   * @apiGroup Player
+   *
+   * @apiDescription Public route for deleting player
+   *
+   */
+  Route.delete('/delete/:id', 'PlayerController.delete')
+
 })

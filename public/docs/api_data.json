@@ -279,6 +279,22 @@
     ]
   },
   {
+    "type": "delete",
+    "url": "/api/players/delete/:id",
+    "title": "delete",
+    "group": "Player",
+    "description": "<p>Public route for deleting player</p>",
+    "version": "0.0.0",
+    "filename": "app/Routes/Player.js",
+    "groupTitle": "Player",
+    "name": "DeleteApiPlayersDeleteId",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/players/delete/:id"
+      }
+    ]
+  },
+  {
     "type": "get",
     "url": "/api/players/filter",
     "title": "filter",

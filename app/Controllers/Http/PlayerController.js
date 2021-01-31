@@ -28,6 +28,16 @@ class PlayerController {
     })
   }
 
+  async delete({params, response}) {
+    await Player
+      .query()
+      .where('id', '=', params.id)
+      .delete()
+    response.send({
+      data: {}
+    })
+  }
+
 }
 
 module.exports = PlayerController
