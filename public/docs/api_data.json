@@ -1,5 +1,21 @@
 [
   {
+    "type": "delete",
+    "url": "/api/events/delete/:id",
+    "title": "delete",
+    "group": "Event",
+    "description": "<p>Public route for deleting event</p>",
+    "version": "0.0.0",
+    "filename": "app/Routes/Event.js",
+    "groupTitle": "Event",
+    "name": "DeleteApiEventsDeleteId",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/events/delete/:id"
+      }
+    ]
+  },
+  {
     "type": "post",
     "url": "/api/events/create",
     "title": "create",
@@ -36,7 +52,8 @@
               "\"goal\"",
               "\"yellow_card\"",
               "\"red_card\"",
-              "\"penalty_kick\""
+              "\"penalty_kick\"",
+              "\"game_end\""
             ],
             "optional": false,
             "field": "type",

@@ -12,6 +12,16 @@ class EventController {
     })
   }
 
+  async delete({params, response}) {
+    await Event
+      .query()
+      .where('id', '=', params.id)
+      .delete()
+    response.send({
+      data: {}
+    })
+  }
+
 }
 
 module.exports = EventController
