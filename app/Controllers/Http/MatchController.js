@@ -79,8 +79,17 @@ class MatchController {
         .where('team_id', match.team_two)
         .count('* as scoreTwo')
 
+
+
       scoreTwo = scoreTwo[0].scoreTwo
+
+      let gameFinishedEvent = await Event.query()
+        .where('type', 'game_end')
+        .where('match_id', match.id)
+        .fetch()
+
       match.score = `${scoreOne} : ${scoreTwo}`
+      match.gameFinished = gameFinishedEvent.toJSON().length > 0
       matchesJSON[i] = match
     }
 
