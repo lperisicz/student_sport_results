@@ -87,6 +87,22 @@ define({ "api": [
     ]
   },
   {
+    "type": "delete",
+    "url": "/api/faculties/delete/:id",
+    "title": "delete",
+    "group": "Faculty",
+    "description": "<p>Public route for deleting faculty</p>",
+    "version": "0.0.0",
+    "filename": "app/Routes/Faculty.js",
+    "groupTitle": "Faculty",
+    "name": "DeleteApiFacultiesDeleteId",
+    "sampleRequest": [
+      {
+        "url": "https://student-sport-results.herokuapp.com/api/faculties/delete/:id"
+      }
+    ]
+  },
+  {
     "type": "get",
     "url": "/api/faculties/filter",
     "title": "filter",

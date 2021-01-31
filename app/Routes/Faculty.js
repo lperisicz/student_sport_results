@@ -26,4 +26,13 @@ module.exports = Route.group(() => {
    */
   Route.get('/filter', 'FacultyController.filter')
 
+  /**
+   * @api {delete} /api/faculties/delete/:id delete
+   * @apiGroup Faculty
+   *
+   * @apiDescription Public route for deleting faculty
+   *
+   */
+  Route.delete('/delete/:id', 'FacultyController.delete')
+
 })
