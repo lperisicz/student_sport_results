@@ -9,6 +9,10 @@ class Event extends Model {
     return this.hasOne('App/Models/Player', 'player_id', 'id')
   }
 
+  team() {
+    return this.hasOne('App/Models/Team', 'team_id', 'id')
+  }
+
 }
 
 module.exports = Event

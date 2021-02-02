@@ -22,9 +22,17 @@ class MatchController {
       .with('sport')
       .with('teamOne')
       .with('teamOne.players')
+      .with('teamOne.faculty')
       .with('teamTwo')
       .with('teamTwo.players')
-      .with('events')
+      .with('teamTwo.faculty')
+      .with('events', builder => {
+        builder
+          .with('player')
+          .with('team')
+          .orderBy('events.time', 'ASC')
+      })
+      .orderBy('date', 'DESC')
       .first()
 
     console.log(JSON.stringify(match));
@@ -59,8 +67,18 @@ class MatchController {
       .where('sport_id', sportId)
       .with('sport')
       .with('teamOne')
+      .with('teamOne.players')
+      .with('teamOne.faculty')
       .with('teamTwo')
-      .with('events')
+      .with('teamTwo.players')
+      .with('teamTwo.faculty')
+      .with('events', builder => {
+        builder
+          .with('player')
+          .with('team')
+          .orderBy('events.time', 'ASC')
+      })
+      .orderBy('date', 'DESC')
       .fetch()
 
     let matchesJSON = matches.toJSON()
