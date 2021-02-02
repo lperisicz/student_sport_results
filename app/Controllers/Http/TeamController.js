@@ -46,6 +46,17 @@ class TeamController {
     })
   }
 
+  async removePlayer({params, response}) {
+    console.log('PLAYER ID. ', params.playerId)
+    await Player
+      .query()
+      .where('id', params.playerId)
+      .update({team_id: null})
+    response.send({
+      data: {}
+    })
+  }
+
 }
 
 module.exports = TeamController

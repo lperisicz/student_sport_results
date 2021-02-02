@@ -38,4 +38,13 @@ module.exports = Route.group(() => {
    */
   Route.delete('/delete/:id', 'TeamController.delete')
 
+  /**
+   * @api {patch} /api/teams/:teamId/remove-player/:playerId removePlayer
+   * @apiGroup Team
+   *
+   * @apiDescription Public route for removing player from team
+   *
+   */
+  Route.patch('/remove-player/:playerId', 'TeamController.removePlayer')
+
 })
