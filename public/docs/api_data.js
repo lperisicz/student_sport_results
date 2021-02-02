@@ -443,17 +443,17 @@ define({ "api": [
   },
   {
     "type": "patch",
-    "url": "/api/teams/:teamId/remove-player/:playerId",
+    "url": "/api/teams/remove-player/:playerId",
     "title": "removePlayer",
     "group": "Team",
     "description": "<p>Public route for removing player from team</p>",
     "version": "0.0.0",
     "filename": "app/Routes/Team.js",
     "groupTitle": "Team",
-    "name": "PatchApiTeamsTeamidRemovePlayerPlayerid",
+    "name": "PatchApiTeamsRemovePlayerPlayerid",
     "sampleRequest": [
       {
-        "url": "https://student-sport-results.herokuapp.com/api/teams/:teamId/remove-player/:playerId"
+        "url": "https://student-sport-results.herokuapp.com/api/teams/remove-player/:playerId"
       }
     ]
   },
