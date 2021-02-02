@@ -27,7 +27,11 @@ class TeamController {
 
   async filter({response}) {
     response.send({
-      data: await Team.all()
+      data: await Team
+        .query()
+        .with('players')
+        .with('faculty')
+        .fetch()
     })
   }
 
